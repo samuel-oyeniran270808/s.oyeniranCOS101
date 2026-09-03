@@ -1,11 +1,11 @@
 fn main() {
 	
-	let p:f64 = 520_000_000.00;
+	let p:f32 = 520_000_000.00;
 
-	let r:f64 = 10.00;
+	let r:f32 = 10.00;
 
 	
-	let amount:f64 = p * (1.00 + (r / 100.00)) * (1.00 + (r / 100.00)) * (1.00 + (r / 100.00)) * (1.00 + (r / 100.00)) * (1.00 + (r / 100.00));
+	let amount:f32 = p * (1.00 + (r / 100.00)) * (1.00 + (r / 100.00)) * (1.00 + (r / 100.00)) * (1.00 + (r / 100.00)) * (1.00 + (r / 100.00));
 
 	let ci = amount - p;
 
@@ -19,11 +19,11 @@ fn main() {
 
 	let rate:f64 = 10.00;
 
-	let time:i32 = 5;
+	let time:f64 = 5.00;
 
-	let amount_2:f64 = principal * (1.00 + (rate / 100.00)).powi(time);
+	let amount_2:f64 = principal * (1.00 + (rate / 100.00)).powf(time);
 	let compound_interest = amount_2 - principal;
 
-	println!("The simple interest is {}", compound_interest);
+	println!("The compound interest is {}", compound_interest);
 
 }
