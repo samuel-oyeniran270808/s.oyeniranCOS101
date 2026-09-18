@@ -1,0 +1,1 @@
+C:\Users\New\OneDrive\ -\ Pan-Atlantic\ University\Documents\s.oyeniranCOS101\week-4\project\project_1\target\debug\project_1.exe: C:\Users\New\OneDrive\ -\ Pan-Atlantic\ University\Documents\s.oyeniranCOS101\week-4\project\project_1\src\main.rs
