@@ -10,10 +10,10 @@ fn main() {
     io::stdin() // This is the input functionality
         .read_line(&mut exp)// Reads what the user inputs and stores it in the exp variable
         .expect("Not a valid input for your expeience");// Prints a user frinedly error if an unaccepted value is inputted
-    let exp: i8 = exp
+    let exp: u8 = exp
         .trim() //Removes whitespace
         .parse() //Converts String to integer of 8 bits
-        .expect("Not a valid input");
+        .expect("Numeric input expected");
     println!("Your experience is {} years", exp);
 
 
@@ -24,10 +24,10 @@ fn main() {
     io::stdin()
         .read_line(&mut age)
         .expect("Not a valid input for your age");
-    let age: i8 = age
+    let age: u8 = age
         .trim()
         .parse()
-        .expect("Not a valid input(2)");
+        .expect("Numeric input expected(2)");
 
         // I used 'const' here because this values are not going to change at all
     const A1: i64 = 1_560_000;
@@ -48,19 +48,30 @@ fn main() {
 
  One last thing, i used ELSE IF instead of just using IF because i wanted to see how it would look and work. Was just exerimenting. 
   */
+
+    if exp > age {
+                println!("Invalid input");
+                return;
+        }
     if exp >= 3 {
              if age >= 40 {
             println!("Your annual incentive is {} considering your age and years of experince", A1);
-        }
+            }
             else if age >= 30 && age < 40 {
                 println!("Your annual incentive is {} considering your age and years of experince", A2);
             }
-            else if age < 29 {
+            else if age < 29  && age >= 18 {
                 println!("Your annual incentive is {} considering your age and years of experince", A3);
+            }
+            else if age < 18 {
+                println!("You do not get an incentive because you are not of working age");
             }
         }
     else if exp < 3 {
             println!("Your annual incentive is {} considering your age and years of experince", A4);
+        }
+    else if exp <= 3 && age < 18 {
+            println!("You do not get an incentive because you are not of working age");
         }
     else {
         println!("Sorry, you are not eligible to any incentive!😭");
