@@ -54,10 +54,19 @@ fn main() {
             break;
         }
 
-
     }
     
-
+    if let Some((index, &max_exp)) = exp_vector
+    .iter()
+    .enumerate()
+    .max_by_key(|&(_, exp)| exp)
+    {
+        println!(
+            "The most experienced candidate is: {} with {} years of experience.",
+            name_vector[index],
+            max_exp
+        );
+    }
 }
 
 
