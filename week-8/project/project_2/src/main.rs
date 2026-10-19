@@ -1,5 +1,6 @@
 use std::io;
 
+
 fn name_input() -> String {
     let mut name = String::new();
     io::stdin().read_line(&mut name).expect("failed to read input");
@@ -7,6 +8,8 @@ fn name_input() -> String {
     println!("Thank you for providing us your name, {}", name);
     name
 }
+
+
 fn exp_input() -> i32 {
     loop {
         let mut exp = String::new();
@@ -29,7 +32,9 @@ fn exp_input() -> i32 {
     }
 }
 
+
 fn main() {
+
     let mut name_vector: Vec<String> = Vec::new();
     let mut exp_vector: Vec<i32> = Vec::new();
 
@@ -53,7 +58,7 @@ fn main() {
             }
             break;
         }
-
+  
     }
     
     if let Some((index, &max_exp)) = exp_vector
